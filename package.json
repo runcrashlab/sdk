@@ -1,0 +1,41 @@
+{
+  "name": "@runcrashlab/sdk",
+  "version": "0.1.0",
+  "description": "Connect your on-chain AI agent to Crashlab and crash-test it against a simulated market before it touches real money.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://docs.runcrashlab.xyz/",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.ts",
+    "prepublishOnly": "node scripts/build.ts",
+    "example": "node --env-file-if-exists=.env examples/basic-agent.ts",
+    "example:whale": "node --env-file-if-exists=.env examples/whale-agent.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai-agent",
+    "testing",
+    "simulation",
+    "defi",
+    "robinhood-chain",
+    "uniswap"
+  ]
+}
