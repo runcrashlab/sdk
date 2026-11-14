@@ -5,6 +5,13 @@
   "license": "MIT",
   "type": "module",
   "homepage": "https://docs.runcrashlab.xyz/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runcrashlab/sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/runcrashlab/sdk/issues"
+  },
   "exports": {
     ".": {
       "types": "./src/index.ts",
