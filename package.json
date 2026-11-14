@@ -29,7 +29,8 @@
     "build": "node scripts/build.ts",
     "prepublishOnly": "node scripts/build.ts",
     "example": "node --env-file-if-exists=.env examples/basic-agent.ts",
-    "example:whale": "node --env-file-if-exists=.env examples/whale-agent.ts"
+    "example:whale": "node --env-file-if-exists=.env examples/whale-agent.ts",
+    "example:claude": "node --env-file-if-exists=.env examples/claude-agent.ts"
   },
   "publishConfig": {
     "access": "public"
@@ -44,5 +45,8 @@
     "defi",
     "robinhood-chain",
     "uniswap"
-  ]
+  ],
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^1.8.0"
+  }
 }

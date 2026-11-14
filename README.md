@@ -83,7 +83,16 @@ npm run build                         # src/index.ts -> dist/index.js
 cp .env.example .env                  # then put your key in .env
 npm run example                       # SCENARIO=swap-deep|swap-thin|rh-usdg-weth|rh-usdg-weth-whale, AGENT=careful|reckless
 npm run example:whale                 # careful agent on the Robinhood Chain whale fork
+npm install && npm run example:claude # Claude decides for itself (needs ANTHROPIC_API_KEY)
 ```
+
+## A real AI agent: Claude
+
+`examples/claude-agent.ts` gives Claude the Crashlab tools and lets it decide for itself: quote, resize, swap or
+stop. It uses the official `@anthropic-ai/sdk`, Claude Opus 5.5 at medium effort, and server-side fallback if the
+model declines a request. A run is usually 3-6 Claude requests, billed to your own Anthropic API key.
+On the whale scenario a sensible agent notices the full order breaks the slippage limit and either stops or trades
+a smaller size; Crashlab's policy engine checks whatever it decides.
 
 ## License
 
